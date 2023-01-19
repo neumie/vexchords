@@ -63,7 +63,7 @@ class ChordBox {
     this.fretSpacing = this.height / (this.numFrets + 2);
 
     // Add room on sides for finger positions on 1. and 6. string
-    this.x = this.params.x + this.params.width * 0.15 + this.spacing / 2;
+    this.x = this.params.x + this.params.width * 0.15;
     this.y = this.params.y + this.params.height * 0.15 + this.fretSpacing;
 
     this.metrics = {
@@ -111,7 +111,7 @@ class ChordBox {
     this.position = position || 0;
     this.positionText = positionText || 0;
     this.barres = barres || [];
-    this.tuning = tuning || ["F", "A", "D", "G", "B", "E"];
+    this.tuning = tuning || ["E", "A", "D", "G", "B", "E"];
     if (this.tuning.length === 0) {
       this.fretSpacing = this.height / (this.numFrets + 1);
     }
