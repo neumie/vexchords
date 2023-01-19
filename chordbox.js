@@ -66,12 +66,10 @@ class ChordBox {
     // this.x = this.params.x + this.params.width * 0.15 + this.spacing;
     // 300 = spacing + 11.5 + 187.5 + 11.5 + spacing
     // this.x = this.params.x + this.width / 20;
-    this.x =
-      this.params.x +
-      (this.params.width -
-        ((this.width / this.numStrings) * (this.numStrings - 1) +
-          this.width / 10)) /
-        2;
+    this.bridgeLength = (this.width / this.numStrings) * (this.numStrings - 1);
+    this.circleLength = this.width / 20;
+    this.chordLength = this.bridgeLength + this.circleLength * 2;
+    this.x = this.params.x + (this.params.width - this.chordLength);
     this.y = this.params.y + this.params.height * 0.15 + this.fretSpacing;
 
     this.metrics = {
