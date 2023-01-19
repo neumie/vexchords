@@ -68,7 +68,9 @@ class ChordBox {
     // this.x = this.params.x + this.width / 20;
     this.x =
       this.params.x +
-      (this.width - (this.spacing * (this.numStrings - 1) + this.width / 10)) /
+      (this.params.width -
+        ((this.width / this.numStrings) * (this.numStrings - 1) +
+          this.width / 10)) /
         2;
     this.y = this.params.y + this.params.height * 0.15 + this.fretSpacing;
 
