@@ -1,6 +1,6 @@
 {
   "name": "@neumie/vexchords",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Javascript Chord Charts",
   "main": "index.js",
   "scripts": {
