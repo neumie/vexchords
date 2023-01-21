@@ -64,7 +64,7 @@ class ChordBox {
 
     // Add room on sides for finger positions on 1. and 6. string
     this.bridgeLength = (this.width / this.numStrings) * (this.numStrings - 1);
-    this.circleLength = this.width / 20;
+    this.circleLength = this.width / 10;
     this.chordLength = this.bridgeLength + this.circleLength * 2;
     this.x = this.params.x + (this.params.width - this.chordLength) / 2;
     this.y = this.params.y + this.params.height * 0.15 + this.fretSpacing;
