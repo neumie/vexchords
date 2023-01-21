@@ -59,7 +59,6 @@ class ChordBox {
     // Initialize scaled-spacing
     this.numStrings = this.params.numStrings;
     this.numFrets = this.params.numFrets;
-    this.spacing = this.width / this.numStrings;
     this.fretSpacing = this.height / (this.numFrets + 2);
 
     // Add room on sides for finger positions on 1. and 6. string
@@ -67,11 +66,12 @@ class ChordBox {
     this.circleLength = this.width / 20;
     this.chordLength = this.bridgeLength + this.circleLength * 2;
     this.x = this.params.x + (this.params.width - this.chordLength) / 2;
+    this.spacing = this.x;
     this.y = this.params.y + this.params.height * 0.15 + this.fretSpacing;
 
-    console.log(this.x, this.params.width, this.chordLength);
-    console.log(this.bridgeLength, this.width, this.numStrings);
-    console.log(this.params.x, this.circleLength);
+    // console.log(this.x, this.params.width, this.chordLength);
+    // console.log(this.bridgeLength, this.width, this.numStrings);
+    // console.log(this.params.x, this.circleLength);
 
     this.metrics = {
       circleRadius: this.width / 20,
@@ -131,7 +131,7 @@ class ChordBox {
       const fromX = this.x;
       const fromY = this.y - this.metrics.bridgeStrokeWidth;
       this.canvas
-        .rect(this.x + spacing * (this.numStrings - 1) - fromX, this.y - fromY)
+        .rect(spacing * (this.numStrings - 1), this.y - fromY)
         .move(fromX, fromY)
         .stroke({ width: 0 })
         .fill(this.params.bridgeColor);
