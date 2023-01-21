@@ -69,7 +69,8 @@ class ChordBox {
     this.x = this.params.x + (this.params.width - this.chordLength) / 2;
     this.y = this.params.y + this.params.height * 0.15 + this.fretSpacing;
 
-    console.log(this.x, this.params.x, this.params.width, this.chordLength);
+    console.log(this.x, this.params.width, this.chordLength);
+    console.log(this.bridgeLength, this.width, this.numStrings);
 
     this.metrics = {
       circleRadius: this.width / 20,
