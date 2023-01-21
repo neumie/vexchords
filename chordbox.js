@@ -59,6 +59,7 @@ class ChordBox {
     // Initialize scaled-spacing
     this.numStrings = this.params.numStrings;
     this.numFrets = this.params.numFrets;
+    this.spacing = this.width / this.numStrings;
     this.fretSpacing = this.height / (this.numFrets + 2);
 
     // Add room on sides for finger positions on 1. and 6. string
